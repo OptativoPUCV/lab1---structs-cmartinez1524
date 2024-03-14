@@ -56,3 +56,14 @@ exercises.c:71:3: error: ‘vector’ undeclared (first use in this function)
 exercises.c:71:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 748a643
+Thu 14 Mar 2024 03:04:08 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:71:9: error: statement with no effect [-Werror=unused-value]
+   71 |   result[size1 + size2];
+      |   ~~~~~~^~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+67d6c5d
