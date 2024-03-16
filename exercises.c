@@ -94,11 +94,14 @@ int checkSorted(int arr[], int size)
   for (int i = 0; i < size - 1; i++)
     if (arr[i] >= arr[i + 1])
       suma_1++;
+  
   for (int i = 0; i < size - 1; i++)
     if (arr[i] <= arr[i + 1])
       suma_2++;
+  
   if (suma_1 == size - 1)
     return -1;
+  
   if (suma_2 == size - 1)
     return 1;
 
@@ -125,7 +128,18 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion) {}
+                      int anioNacimiento, int anioPublicacion) 
+{
+  strcpy(libro->titulo, titulo);
+  strcpy(libro->autor.nombre, nombreAutor);
+  libro->autor.anioNacimiento = anioNacimiento;
+  libro->anioPublicacion = anioPublicacion;
+
+  
+  
+  
+  
+}
 
 /*
 Ejercicio 7: Lista enlazada de números
