@@ -98,9 +98,9 @@ int checkSorted(int arr[], int size)
     if (arr[i] <= arr[i + 1])
       suma_2++;
   if (suma_1 == size - 1)
-    return 1;
-  if (suma_2 == size - 1)
     return -1;
+  if (suma_2 == size - 1)
+    return 1;
 
   return 0;
 }
