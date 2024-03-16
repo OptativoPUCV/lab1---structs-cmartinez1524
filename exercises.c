@@ -90,7 +90,19 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) 
 { 
-  return -2; 
+  int suma_1 = 0, suma_2 = 0;
+  for (int i = 0; i < size - 1; i++)
+    if (arr[i] > arr[i + 1])
+      suma_1++;
+  for (int i = 0; i < size - 1; i++)
+    if (arr[i] < arr[i + 1])
+      suma_2++;
+  if (suma_1 == size - 1)
+    return 1;
+  if (suma_2 == size - 1)
+    return -1;
+
+  return 0;
 }
 
 /*
